@@ -1,22 +1,22 @@
 #pragma once
 
-
 class Doc : public CDocument
 {
 protected: // create from serialization only
 	Doc();
 	DECLARE_DYNCREATE(Doc)
 
-// Attributes
+	// Attributes
+public:
+	CRect coordinates;
+
+	// Operations
 public:
 
-// Operations
+	// Overrides
+		// ClassWizard generated virtual function overrides
+		//{{AFX_VIRTUAL(Doc)
 public:
-
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(Doc)
-	public:
 	virtual BOOL OnNewDocument();
 	virtual void Serialize(CArchive& ar);
 	//}}AFX_VIRTUAL
@@ -31,7 +31,7 @@ public:
 
 protected:
 
-// Generated message map functions
+	// Generated message map functions
 protected:
 	//{{AFX_MSG(Doc)
 	//}}AFX_MSG

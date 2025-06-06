@@ -27,6 +27,7 @@ END_MESSAGE_MAP()
 
 Doc::Doc()
 {
+	coordinates.SetRect(50, 30, 300, 200);
 }
 
 Doc::~Doc()
@@ -38,10 +39,10 @@ BOOL Doc::OnNewDocument()
 	if (!CDocument::OnNewDocument())
 		return FALSE;
 
+	coordinates.SetRect(50, 30, 300, 200);
+
 	return TRUE;
 }
-
-
 
 /////////////////////////////////////////////////////////////////////////////
 // Doc serialization
@@ -50,9 +51,11 @@ void Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
+		ar << coordinates;
 	}
 	else
 	{
+		ar >> coordinates;
 	}
 }
 

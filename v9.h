@@ -12,11 +12,12 @@ class App : public CWinApp
 	CMultiDocTemplate* paintTmpl;
 public:
 	App();
+	virtual ~App();
 
-// Overrides
-	// ClassWizard generated virtual function overrides
-	//{{AFX_VIRTUAL(App)
-	public:
+	// Overrides
+		// ClassWizard generated virtual function overrides
+		//{{AFX_VIRTUAL(App)
+public:
 	virtual BOOL InitInstance();
 	//}}AFX_VIRTUAL
 
